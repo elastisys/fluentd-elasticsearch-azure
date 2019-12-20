@@ -1,6 +1,5 @@
 FROM quay.io/fluentd_elasticsearch/fluentd:v2.7.0
 
-USER root
 RUN apt-get update \
  && buildDeps="build-essential zlib1g-dev ruby-dev" \
  && apt-get install -y --no-install-recommends $buildDeps \
@@ -17,5 +16,3 @@ RUN apt-get update \
                   $buildDeps \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
-
-USER fluent
