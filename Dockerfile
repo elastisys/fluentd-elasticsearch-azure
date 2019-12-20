@@ -1,4 +1,4 @@
-FROM fluent/fluentd:v1.8-debian-1
+FROM quay.io/fluentd_elasticsearch/fluentd:v2.7.0
 
 USER root
 RUN apt-get update \
